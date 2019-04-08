@@ -10,16 +10,16 @@ namespace ACM.BLTest
         [TestMethod]
         public void FullNameTestValid()
         {
-            //-- Arrange
+            //-- Arrange. Set up the data
             Customer customer = new Customer();
             customer.FirstName = "Bilbo";
             customer.LastName = "Baggins";
 
-            //--Act
+            //--Act. Access the member being tested
             var actual = customer.FullName;
             var expected = "Baggins, Bilbo";
 
-            //--Assert
+            //--Assert. Determine the result
             Assert.AreEqual(expected, actual);
             
         }
@@ -57,12 +57,43 @@ namespace ACM.BLTest
             {
                 FirstName = "Rosie"
             };
-            Customer.InstanceCount += 1;
-
-
-           
+            Customer.InstanceCount += 1;           
 
             Assert.AreEqual(3, Customer.InstanceCount);
         }
+
+        [TestMethod]
+        public void ValidateValid()
+        {
+            Customer customer = new Customer
+            {
+                FirstName = "Bilbo",
+               LastName = "Baggins",
+               Email = "fbaggins@hobbiton.me"
+            };
+
+            var expected = true;
+
+            var actual = customer.Validate();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ValidateMissingLastName()
+        {
+            Customer customer = new Customer
+            {
+                
+                Email = "fbaggins@hobbiton.me"
+            };
+
+            var expected = false;
+
+            var actual = customer.Validate();
+
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }

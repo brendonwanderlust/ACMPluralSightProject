@@ -8,6 +8,11 @@ namespace ACM.BL
 {
     public class Customer
     {
+        public Customer (int customerId)
+        {
+            CustomerId = customerId;
+        }
+
         public static int InstanceCount { get; set; }
 
         public string FirstName { get; set; }
@@ -34,6 +39,16 @@ namespace ACM.BL
                 return fullName;
             }
         }
+
+        public bool Validate()
+        {
+            var isValid = true;
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(Email)) isValid = false;
+            return isValid;
+        }
+
+
 
     }
 }

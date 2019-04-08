@@ -37,5 +37,32 @@ namespace ACM.BLTest
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void StaticTest()
+        {
+            Customer c1 = new Customer
+            {
+                FirstName = "Bilbo"
+            };
+            Customer.InstanceCount += 1;
+
+            Customer c2 = new Customer
+            {
+                FirstName = "Frodo"
+            };
+            Customer.InstanceCount += 1;
+
+            Customer c3 = new Customer
+            {
+                FirstName = "Rosie"
+            };
+            Customer.InstanceCount += 1;
+
+
+           
+
+            Assert.AreEqual(3, Customer.InstanceCount);
+        }
     }
 }

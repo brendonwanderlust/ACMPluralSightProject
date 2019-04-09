@@ -9,12 +9,18 @@ namespace ACM.BL
     public class CustomerRepository
     {
 
+        public CustomerRepository()
+        {
+
+        }
+
         public Customer Retrieve(int customerId)
         {
             Customer customer = new Customer(customerId);
 
             if (customerId == 1)
             {
+                
                 customer.Email = "fbaggins@hobbiton.me";
                 customer.FirstName = "Frodo";
                 customer.LastName = "Baggins";

@@ -8,6 +8,11 @@ namespace ACM.BL
 {
     public class Customer
     {
+        public Customer()
+        {
+
+        }
+
         public Customer (int customerId)
         {
             CustomerId = customerId;

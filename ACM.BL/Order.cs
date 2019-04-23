@@ -27,15 +27,7 @@ namespace ACM.BL
             return true;
         }
 
-        public Order Retreive()
-        {
-            return new Order();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
+      
 
     }
 }

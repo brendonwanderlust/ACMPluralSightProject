@@ -22,7 +22,7 @@ namespace ACM.BL
 
         public int ProductId { get; private set; }
 
-        public string Description { get; set; }
+        public string ProductDescription { get; set; }
 
         public decimal? CurrentPrice { get; set; }
 
@@ -31,15 +31,6 @@ namespace ACM.BL
             return true;
         }
 
-        public Product Retrieve(int productId)
-        {
-            //code
-            return new Product();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
+       
     }
 }

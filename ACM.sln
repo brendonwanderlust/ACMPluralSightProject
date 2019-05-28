@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5963887D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BLTest", "ACM.BLTest\ACM.BLTest.csproj", "{B3CE76F7-27E1-45E1-BB4E-388F59CF6D2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Common", "Acme.Common\Acme.Common.csproj", "{13612CF4-6A80-4D32-B80A-17662AE29685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.CommonTest", "Acme.CommonTest\Acme.CommonTest.csproj", "{91E03715-3D0F-4306-9D79-3783FE0C036C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,21 @@ Global
 		{B3CE76F7-27E1-45E1-BB4E-388F59CF6D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3CE76F7-27E1-45E1-BB4E-388F59CF6D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3CE76F7-27E1-45E1-BB4E-388F59CF6D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13612CF4-6A80-4D32-B80A-17662AE29685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13612CF4-6A80-4D32-B80A-17662AE29685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13612CF4-6A80-4D32-B80A-17662AE29685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13612CF4-6A80-4D32-B80A-17662AE29685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91E03715-3D0F-4306-9D79-3783FE0C036C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91E03715-3D0F-4306-9D79-3783FE0C036C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91E03715-3D0F-4306-9D79-3783FE0C036C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91E03715-3D0F-4306-9D79-3783FE0C036C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B3CE76F7-27E1-45E1-BB4E-388F59CF6D2E} = {5963887D-AC6D-48B0-99FC-2708490A64C1}
+		{91E03715-3D0F-4306-9D79-3783FE0C036C} = {5963887D-AC6D-48B0-99FC-2708490A64C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C06F330-E38D-46B3-A557-D2A10E9D01E7}

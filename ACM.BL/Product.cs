@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase, ILoggable
     {
         public Product()
         {
@@ -17,8 +18,21 @@ namespace ACM.BL
         {
             ProductId = productId;
         }
+        private string _productName;
+        public string ProductName
+        {
+            get
+            {
+                
+                return _productName.InsertSpaces();
+            }
+            set
+            {
+                _productName = value;
+            }
+        }
 
-        public string ProductName { get; set; }
+        
 
         public int ProductId { get; private set; }
 
@@ -29,11 +43,17 @@ namespace ACM.BL
         public override string ToString() => ProductName;
         
 
-        public bool Validate()
+        public override bool Validate()
         {
-            return true;
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(ProductName)) isValid = false;
+            if (CurrentPrice == null) isValid = false;
+
+            return isValid;
         }
 
-       
+        public string Log() =>
+            $"{ProductId}: {ProductName} Detail: {ProductDescription} Status: {EntityState.ToString()}";
     }
 }
